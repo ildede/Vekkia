@@ -1,0 +1,59 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://Script/Ostacolo.gd" type="Script" id=1]
+[ext_resource path="res://Images/Ferraglia/trivella_bassa.png" type="Texture" id=2]
+
+[sub_resource type="ConvexPolygonShape2D" id=1]
+
+custom_solver_bias = 0.0
+points = PoolVector2Array( 0, -10, 8.66025, 5, -8.66025, 5 )
+
+[node name="Ostacolo" type="StaticBody2D" index="0"]
+
+position = Vector2( 684.004, 425.265 )
+rotation = -7.54436e-08
+scale = Vector2( 1.58011, 1.97432 )
+input_pickable = true
+collision_layer = 1
+collision_mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+script = ExtResource( 1 )
+_sections_unfolded = [ "Collision", "Pickable", "Transform" ]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." index="0"]
+
+position = Vector2( 147.149, 116.964 )
+rotation = 0.0284745
+scale = Vector2( 6.78035, 25.5787 )
+shape = SubResource( 1 )
+_sections_unfolded = [ "Transform", "Z Index" ]
+
+[node name="braccio_normale" type="Button" parent="." index="1"]
+
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = 45.0
+margin_top = -247.0
+margin_right = 303.0
+margin_bottom = 287.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 4
+size_flags_vertical = 4
+toggle_mode = false
+enabled_focus_mode = 0
+shortcut = null
+group = null
+icon = ExtResource( 2 )
+flat = true
+align = 1
+_sections_unfolded = [ "Anchor", "Margin", "Size Flags" ]
+
+

@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/forset_and_nature_sound.wav-a6de3ee324ca7e9416989f83222fb624.sample"
+
+[deps]
+
+source_file="res://AudioEffects/forset_and_nature_sound.wav"
+dest_files=[ "res://.import/forset_and_nature_sound.wav-a6de3ee324ca7e9416989f83222fb624.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=true
+edit/normalize=true
+edit/loop=false
+compress/mode=0

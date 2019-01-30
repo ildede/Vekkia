@@ -1,0 +1,869 @@
+[gd_scene load_steps=43 format=2]
+
+[ext_resource path="res://Script/LevelBase.gd" type="Script" id=1]
+[ext_resource path="res://Scenes/BaseLevel/Background.tscn" type="PackedScene" id=2]
+[ext_resource path="res://Scenes/BaseLevel/Vecchina.tscn" type="PackedScene" id=3]
+[ext_resource path="res://Scenes/UI/DeathCountdown.tscn" type="PackedScene" id=4]
+[ext_resource path="res://Images/End/restart.png" type="Texture" id=5]
+[ext_resource path="res://Images/Bosco/cornice gioco.png" type="Texture" id=6]
+[ext_resource path="res://Images/Bosco/base_terreno.png" type="Texture" id=7]
+[ext_resource path="res://Scenes/BaseLevel/Foreground.tscn" type="PackedScene" id=8]
+[ext_resource path="res://Images/End/baloon.png" type="Texture" id=9]
+[ext_resource path="res://Scenes/Ostacoli/Cliccabili/OstacoloLamieraGrande.tscn" type="PackedScene" id=10]
+[ext_resource path="res://Scenes/Ostacoli/Abbellimenti/DecorazioneCuore1.tscn" type="PackedScene" id=11]
+[ext_resource path="res://Scenes/Ostacoli/Cliccabili/OstacoloTrivellaCorta.tscn" type="PackedScene" id=12]
+[ext_resource path="res://Scenes/Ostacoli/Abbellimenti/DecorazioneAlberoPiccolo.tscn" type="PackedScene" id=13]
+[ext_resource path="res://Scenes/Ostacoli/Cliccabili/OstacoloCamino.tscn" type="PackedScene" id=14]
+[ext_resource path="res://Scenes/Ostacoli/Abbellimenti/DecorazionePalloncino.tscn" type="PackedScene" id=15]
+[ext_resource path="res://Scenes/Ostacoli/Cliccabili/OstacoloLamieraPiccola.tscn" type="PackedScene" id=16]
+[ext_resource path="res://Scenes/Ostacoli/Abbellimenti/DecorazioneCuore2.tscn" type="PackedScene" id=17]
+[ext_resource path="res://Scenes/Ostacoli/Cliccabili/OstacoloTrivellaLunga.tscn" type="PackedScene" id=18]
+[ext_resource path="res://Scenes/Ostacoli/Cliccabili/OstacoloAntenna.tscn" type="PackedScene" id=19]
+[ext_resource path="res://Scenes/Ostacoli/Cliccabili/OstacoloBidone.tscn" type="PackedScene" id=20]
+[ext_resource path="res://Scenes/Ostacoli/Abbellimenti/DecorazioneFuoco.tscn" type="PackedScene" id=21]
+[ext_resource path="res://Scenes/Ostacoli/Cliccabili/OstacoloTuboPiegato.tscn" type="PackedScene" id=22]
+[ext_resource path="res://Scenes/Ostacoli/Abbellimenti/DecorazioneFiori.tscn" type="PackedScene" id=23]
+[ext_resource path="res://Scenes/Ostacoli/Abbellimenti/DecorazioneAlberoGrande.tscn" type="PackedScene" id=24]
+[ext_resource path="res://Scenes/Ostacoli/Abbellimenti/DecorazioneErba1.tscn" type="PackedScene" id=25]
+[ext_resource path="res://Scenes/Ostacoli/Abbellimenti/DecorazioneErba2.tscn" type="PackedScene" id=26]
+[ext_resource path="res://Images/End/tomba.png" type="Texture" id=27]
+[ext_resource path="res://Scenes/Sounds/ForestBackgroundAudio.tscn" type="PackedScene" id=28]
+[ext_resource path="res://Images/Abbellimenti/prato.png" type="Texture" id=29]
+[ext_resource path="res://Images/Abbellimenti/abbellimento_albero_grosso.png" type="Texture" id=30]
+[ext_resource path="res://Images/Abbellimenti/fiori.png" type="Texture" id=31]
+[ext_resource path="res://Images/Abbellimenti/abbellimento_albero_fino.png" type="Texture" id=32]
+[ext_resource path="res://Images/Abbellimenti/palloncino.png" type="Texture" id=33]
+[ext_resource path="res://Images/Abbellimenti/cuore_01.png" type="Texture" id=34]
+[ext_resource path="res://Images/Abbellimenti/erba_02.png" type="Texture" id=35]
+[ext_resource path="res://Images/Abbellimenti/erba_01.png" type="Texture" id=36]
+
+[sub_resource type="RectangleShape2D" id=1]
+
+custom_solver_bias = 0.0
+extents = Vector2( 10, 20.3083 )
+
+[sub_resource type="RectangleShape2D" id=2]
+
+custom_solver_bias = 0.0
+extents = Vector2( 97.6367, 10 )
+
+[sub_resource type="RectangleShape2D" id=3]
+
+custom_solver_bias = 0.0
+extents = Vector2( 10, 10 )
+
+[sub_resource type="Animation" id=4]
+
+resource_name = "Anim_BaloonRise"
+length = 3.0
+loop = false
+step = 0.1
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.5, 1, 1.5, 2, 2.5, 3 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( 125.084, -10.2529 ), Vector2( 199.215, -151.616 ), Vector2( 116.273, -274.524 ), Vector2( 203.017, -423.576 ), Vector2( 85.3857, -545.972 ), Vector2( 145.129, -618.128 ), Vector2( 102.346, -673.881 ) ]
+}
+
+[sub_resource type="RectangleShape2D" id=5]
+
+custom_solver_bias = 0.0
+extents = Vector2( 10, 10.2445 )
+
+[sub_resource type="RectangleShape2D" id=6]
+
+custom_solver_bias = 0.0
+extents = Vector2( 212.931, 43.4927 )
+
+[node name="Level" type="Container" index="0"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = -935.0
+margin_top = 12.0
+margin_right = -935.0
+margin_bottom = 12.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+script = ExtResource( 1 )
+
+[node name="Background" parent="." index="0" instance=ExtResource( 2 )]
+
+margin_left = 3.0
+margin_right = 43.0
+rect_scale = Vector2( 1, 1.2 )
+_sections_unfolded = [ "Anchor", "Grow Direction", "Material", "Rect" ]
+
+[node name="Background2" parent="." index="1" instance=ExtResource( 2 )]
+
+margin_left = 11124.0
+margin_top = -1.0
+margin_right = 11164.0
+margin_bottom = 39.0
+rect_scale = Vector2( -1, 1.2 )
+_sections_unfolded = [ "Anchor", "Grow Direction", "Material", "Rect" ]
+
+[node name="Background3" parent="." index="2" instance=ExtResource( 2 )]
+
+margin_left = 16681.0
+margin_top = -1.0
+margin_right = 16721.0
+margin_bottom = 39.0
+rect_scale = Vector2( -1, 1.2 )
+_sections_unfolded = [ "Anchor", "Grow Direction", "Material", "Rect" ]
+
+[node name="Floor" type="StaticBody2D" parent="." index="3"]
+
+position = Vector2( 2062.5, 664.009 )
+rotation = -8.01589e-08
+scale = Vector2( 1.58011, 1.97432 )
+input_pickable = false
+collision_layer = 1
+collision_mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+
+[node name="FloorShape" type="CollisionShape2D" parent="Floor" index="0"]
+
+position = Vector2( 2333.21, 242.496 )
+scale = Vector2( 500, 1 )
+shape = SubResource( 1 )
+_sections_unfolded = [ "Transform" ]
+
+[node name="Vecchina" parent="." index="4" instance=ExtResource( 3 )]
+
+position = Vector2( 636.522, 947.027 )
+z_index = 1
+_sections_unfolded = [ "Collision", "Material", "Pause", "Pickable", "Transform", "Visibility", "Z Index", "collision" ]
+
+[node name="Camera2D" type="Camera2D" parent="Vecchina" index="3"]
+
+position = Vector2( -1163.43, -1936.57 )
+scale = Vector2( 2.5, 2.5 )
+z_index = 15
+anchor_mode = 0
+rotating = false
+current = true
+zoom = Vector2( 1, 1 )
+limit_left = -10000000
+limit_top = -10000000
+limit_right = 10000000
+limit_bottom = 10000000
+limit_smoothed = false
+drag_margin_h_enabled = true
+drag_margin_v_enabled = true
+smoothing_enabled = false
+smoothing_speed = 5.0
+offset_v = 0.0
+offset_h = 0.0
+drag_margin_left = 0.2
+drag_margin_top = 0.2
+drag_margin_right = 0.2
+drag_margin_bottom = 0.2
+editor_draw_screen = true
+editor_draw_limits = false
+editor_draw_drag_margin = false
+_sections_unfolded = [ "Drag Margin", "Editor", "Limit", "Offset", "Smoothing", "Transform", "Z Index" ]
+
+[node name="DeathCountdown" parent="Vecchina/Camera2D" index="0" instance=ExtResource( 4 )]
+
+margin_left = 15.0
+margin_top = 84.0
+margin_right = 15.0
+margin_bottom = 84.0
+
+[node name="Restart" type="TextureButton" parent="Vecchina/Camera2D" index="1"]
+
+visible = false
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 570.0
+margin_top = 160.0
+margin_right = 570.0
+margin_bottom = 160.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+focus_mode = 2
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+toggle_mode = false
+enabled_focus_mode = 2
+shortcut = null
+group = null
+texture_normal = ExtResource( 5 )
+_sections_unfolded = [ "Anchor", "Grow Direction", "Margin", "Rect", "Textures" ]
+
+[node name="Frame" type="Sprite" parent="Vecchina/Camera2D" index="2"]
+
+position = Vector2( -6.10352e-05, 0.00012207 )
+z_index = 10
+texture = ExtResource( 6 )
+centered = false
+_sections_unfolded = [ "Offset" ]
+
+[node name="base_terreno" type="Sprite" parent="." index="5"]
+
+position = Vector2( 14125, 1208 )
+z_index = 5
+texture = ExtResource( 7 )
+_sections_unfolded = [ "Z Index" ]
+
+[node name="Foreground" parent="." index="6" instance=ExtResource( 8 )]
+
+margin_left = 11.0
+margin_top = 163.0
+margin_right = 51.0
+margin_bottom = 203.0
+_sections_unfolded = [ "Material", "Visibility" ]
+
+[node name="Foreground2" parent="." index="7" instance=ExtResource( 8 )]
+
+margin_left = 5568.0
+margin_top = 160.0
+margin_right = 5608.0
+margin_bottom = 200.0
+
+[node name="Foreground3" parent="." index="8" instance=ExtResource( 8 )]
+
+margin_left = 11110.0
+margin_top = 160.0
+margin_right = 11150.0
+margin_bottom = 200.0
+
+[node name="SlowTrigger" type="Area2D" parent="." index="9"]
+
+editor/display_folded = true
+position = Vector2( 20220.8, 1939.5 )
+input_pickable = true
+gravity_vec = Vector2( 0, 1 )
+gravity = 98.0
+linear_damp = 0.1
+angular_damp = 1.0
+audio_bus_override = false
+audio_bus_name = "Master"
+_sections_unfolded = [ "Transform" ]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="SlowTrigger" index="0"]
+
+position = Vector2( -9195.28, -1167.74 )
+scale = Vector2( 0.885253, 30 )
+shape = SubResource( 2 )
+_sections_unfolded = [ "Transform" ]
+
+[node name="EndTrigger" type="Area2D" parent="." index="10"]
+
+editor/display_folded = true
+position = Vector2( 20220.8, 1939.5 )
+input_pickable = true
+gravity_vec = Vector2( 0, 1 )
+gravity = 98.0
+linear_damp = 0.1
+angular_damp = 1.0
+audio_bus_override = false
+audio_bus_name = "Master"
+_sections_unfolded = [ "Transform" ]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="EndTrigger" index="0"]
+
+position = Vector2( -6045.8, -1171.5 )
+scale = Vector2( 0.135255, 30 )
+shape = SubResource( 2 )
+_sections_unfolded = [ "Transform" ]
+
+[node name="StaticBody2D" type="StaticBody2D" parent="EndTrigger" index="1"]
+
+position = Vector2( -5821.8, -1151.5 )
+scale = Vector2( 3.9375, 11.5625 )
+input_pickable = false
+collision_layer = 1
+collision_mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+_sections_unfolded = [ "Collision" ]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="EndTrigger/StaticBody2D" index="0"]
+
+position = Vector2( -21.3333, 0 )
+scale = Vector2( 2.68804, 2.52807 )
+shape = SubResource( 3 )
+
+[node name="StopCameraTrigger" type="Area2D" parent="." index="11"]
+
+position = Vector2( 19460.4, 1951.86 )
+input_pickable = true
+gravity_vec = Vector2( 0, 1 )
+gravity = 98.0
+linear_damp = 0.1
+angular_damp = 1.0
+audio_bus_override = false
+audio_bus_name = "Master"
+_sections_unfolded = [ "Transform" ]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StopCameraTrigger" index="0"]
+
+position = Vector2( -6197.85, -1157.96 )
+scale = Vector2( 1.58264, 30 )
+shape = SubResource( 2 )
+_sections_unfolded = [ "Transform" ]
+
+[node name="BuriedTrigger" type="Area2D" parent="." index="12"]
+
+position = Vector2( 13857.8, 1531.67 )
+input_pickable = true
+gravity_vec = Vector2( 0, 1 )
+gravity = 98.0
+linear_damp = 0.1
+angular_damp = 1.0
+audio_bus_override = false
+audio_bus_name = "Master"
+_sections_unfolded = [ "Transform" ]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="BuriedTrigger" index="0"]
+
+position = Vector2( 130.046, 115.705 )
+scale = Vector2( 7.43584, 8.5421 )
+shape = SubResource( 2 )
+_sections_unfolded = [ "Transform" ]
+
+[node name="baloon" type="Sprite" parent="BuriedTrigger" index="1"]
+
+position = Vector2( 75.6885, 269.372 )
+z_index = 1
+texture = ExtResource( 9 )
+_sections_unfolded = [ "Transform", "Z Index" ]
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="BuriedTrigger/baloon" index="0"]
+
+root_node = NodePath("..")
+autoplay = ""
+playback_process_mode = 1
+playback_default_blend_time = 0.0
+playback_speed = 1.0
+anims/Anim_BaloonRise = SubResource( 4 )
+blend_times = [  ]
+
+[node name="Ost1" parent="." index="13" instance=ExtResource( 10 )]
+
+editor/display_folded = true
+position = Vector2( 2284.83, 579.097 )
+rotation = 0.0189811
+scale = Vector2( 0.867788, 1.22014 )
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="Ost1" index="2"]
+
+position = Vector2( -204.953, 274.597 )
+rotation = -0.0120699
+scale = Vector2( 6.49579, 15.0593 )
+shape = SubResource( 5 )
+
+[node name="Position2D" type="Position2D" parent="Ost1" index="3"]
+
+[node name="Decorazione" parent="Ost1/Position2D" index="0" instance=ExtResource( 11 )]
+
+[node name="Ost2" parent="." index="14" instance=ExtResource( 12 )]
+
+editor/display_folded = true
+position = Vector2( 3156.5, 45.7107 )
+rotation = -4.07794
+scale = Vector2( 1.11301, -1.49251 )
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="Ost2" index="2"]
+
+position = Vector2( 721.084, 290.728 )
+rotation = 2.11052
+scale = Vector2( 3.13986, -10.8028 )
+shape = SubResource( 5 )
+
+[node name="Position2D" type="Position2D" parent="Ost2" index="3"]
+
+position = Vector2( 401.791, 124.278 )
+rotation = -0.621599
+scale = Vector2( 1.20126, 0.704427 )
+_sections_unfolded = [ "Transform" ]
+
+[node name="Decorazione" parent="Ost2/Position2D" index="0" instance=ExtResource( 13 )]
+
+[node name="Ost3" parent="." index="15" instance=ExtResource( 14 )]
+
+editor/display_folded = true
+position = Vector2( 2841.33, 423.982 )
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="Ost3" index="2"]
+
+position = Vector2( -101.514, 211.837 )
+rotation = 3.13991
+scale = Vector2( 2.90753, 12.1714 )
+shape = SubResource( 5 )
+
+[node name="Position2D" type="Position2D" parent="Ost3" index="3"]
+
+position = Vector2( -32.7014, 110.663 )
+scale = Vector2( 0.844403, 0.631384 )
+
+[node name="Decorazione" parent="Ost3/Position2D" index="0" instance=ExtResource( 15 )]
+
+rotation = 6.03799e-08
+
+[node name="Ost4" parent="." index="16" instance=ExtResource( 16 )]
+
+editor/display_folded = true
+position = Vector2( 3629.58, 708.768 )
+rotation = -0.183009
+scale = Vector2( 1.95599, 1.66781 )
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="Ost4" index="2"]
+
+position = Vector2( -129.922, 51.671 )
+rotation = -2.98286
+scale = Vector2( 2.36303, 14.344 )
+shape = SubResource( 5 )
+
+[node name="Position2D" type="Position2D" parent="Ost4" index="3"]
+
+[node name="Decorazione" parent="Ost4/Position2D" index="0" instance=ExtResource( 17 )]
+
+position = Vector2( -13.6051, 36.55 )
+rotation = 0.213744
+scale = Vector2( 0.514419, 0.596872 )
+
+[node name="Ost5" parent="." index="17" instance=ExtResource( 18 )]
+
+editor/display_folded = true
+position = Vector2( 4317.01, 270.935 )
+rotation = -0.115219
+scale = Vector2( 1, 1 )
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="Ost5" index="2"]
+
+position = Vector2( -310.209, 544.546 )
+rotation = -3.04003
+scale = Vector2( 4.60627, 24.0349 )
+shape = SubResource( 5 )
+
+[node name="Position2D" type="Position2D" parent="Ost5" index="3"]
+
+position = Vector2( -132.241, 351 )
+
+[node name="Decorazione" parent="Ost5/Position2D" index="0" instance=ExtResource( 15 )]
+
+[node name="Ost6" parent="." index="18" instance=ExtResource( 19 )]
+
+editor/display_folded = true
+position = Vector2( 4805.72, 449.037 )
+rotation = 1.21406
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="Ost6" index="2"]
+
+position = Vector2( 171.306, 239.913 )
+rotation = 1.86434
+scale = Vector2( 2.65384, 13.7049 )
+shape = SubResource( 5 )
+
+[node name="Position2D" type="Position2D" parent="Ost6" index="3"]
+
+position = Vector2( -65.8484, 240.282 )
+rotation = -1.1824
+scale = Vector2( 0.691095, 0.535307 )
+
+[node name="Decorazione" parent="Ost6/Position2D" index="0" instance=ExtResource( 13 )]
+
+[node name="Ost7" parent="." index="19" instance=ExtResource( 20 )]
+
+editor/display_folded = true
+position = Vector2( 4938.86, 894.227 )
+scale = Vector2( 1, 1 )
+
+[node name="Position2D" type="Position2D" parent="Ost7" index="2"]
+
+position = Vector2( 6.15186, 32 )
+
+[node name="Decorazione" parent="Ost7/Position2D" index="0" instance=ExtResource( 21 )]
+
+rotation = 7.54436e-08
+
+[node name="Ost8" parent="." index="20" instance=ExtResource( 22 )]
+
+editor/display_folded = true
+position = Vector2( 5335.23, 361.985 )
+rotation = 0.0434589
+scale = Vector2( 1.69778, -1.72182 )
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="Ost8" index="2"]
+
+position = Vector2( -90.437, -211.484 )
+rotation = 3.18601
+scale = Vector2( 2.71299, -21.6397 )
+shape = SubResource( 5 )
+
+[node name="Position2D" type="Position2D" parent="Ost8" index="3"]
+
+position = Vector2( 8.07837, -339.479 )
+rotation = 2.95991
+
+[node name="Decorazione" parent="Ost8/Position2D" index="0" instance=ExtResource( 23 )]
+
+[node name="Ost9" parent="." index="21" instance=ExtResource( 16 )]
+
+editor/display_folded = true
+position = Vector2( 5938.59, 718.435 )
+rotation = 0.247704
+scale = Vector2( 0.7, 0.7 )
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="Ost9" index="2"]
+
+position = Vector2( -264.657, 61.8807 )
+rotation = 2.89231
+scale = Vector2( 6.58027, 53.2267 )
+shape = SubResource( 5 )
+
+[node name="Position2D" type="Position2D" parent="Ost9" index="3"]
+
+position = Vector2( -19.0967, -211.747 )
+
+[node name="Decorazione" parent="Ost9/Position2D" index="0" instance=ExtResource( 24 )]
+
+[node name="Ost10" parent="." index="22" instance=ExtResource( 12 )]
+
+editor/display_folded = true
+position = Vector2( 6188.99, 303.989 )
+rotation = 0.729825
+scale = Vector2( 0.722664, 0.724529 )
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="Ost10" index="2"]
+
+position = Vector2( 237.775, 549 )
+rotation = 2.41147
+scale = Vector2( 6.36659, 51.484 )
+shape = SubResource( 5 )
+
+[node name="Position2D" type="Position2D" parent="Ost10" index="3"]
+
+position = Vector2( 652.093, 632.022 )
+rotation = -0.83023
+scale = Vector2( 3.96443, 3.92722 )
+
+[node name="Decorazione" parent="Ost10/Position2D" index="0" instance=ExtResource( 25 )]
+
+[node name="Ost11" parent="." index="23" instance=ExtResource( 22 )]
+
+editor/display_folded = true
+position = Vector2( 6901.66, 276.241 )
+rotation = -0.0704697
+scale = Vector2( 1.75111, 1.50784 )
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="Ost11" index="2"]
+
+position = Vector2( -140.804, 276.462 )
+rotation = -3.06164
+scale = Vector2( 2.63262, 24.6938 )
+shape = SubResource( 5 )
+
+[node name="Position2D" type="Position2D" parent="Ost11" index="3"]
+
+position = Vector2( -92.312, 221.131 )
+rotation = 0.315616
+scale = Vector2( 0.684192, 0.738962 )
+
+[node name="Decorazione" parent="Ost11/Position2D" index="0" instance=ExtResource( 13 )]
+
+[node name="Ost12" parent="." index="24" instance=ExtResource( 14 )]
+
+editor/display_folded = true
+position = Vector2( 7314.41, 376.66 )
+scale = Vector2( 2.74677, 3.03254 )
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="Ost12" index="2"]
+
+position = Vector2( -84.801, 184.175 )
+rotation = 3.14016
+scale = Vector2( 1.67694, 5.16552 )
+shape = SubResource( 5 )
+
+[node name="Position2D" type="Position2D" parent="Ost12" index="3"]
+
+position = Vector2( 98.0134, -68.4673 )
+scale = Vector2( 0.480115, 0.538435 )
+
+[node name="Decorazione" parent="Ost12/Position2D" index="0" instance=ExtResource( 24 )]
+
+rotation = 6.83342e-08
+
+[node name="Ost13" parent="." index="25" instance=ExtResource( 10 )]
+
+editor/display_folded = true
+position = Vector2( 8157.51, 662.493 )
+rotation = -0.0525211
+scale = Vector2( 0.704516, 0.927326 )
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="Ost13" index="2"]
+
+position = Vector2( -268.411, 283.74 )
+rotation = -3.10288
+scale = Vector2( 6.5345, 16.9085 )
+shape = SubResource( 5 )
+
+[node name="Position2D" type="Position2D" parent="Ost13" index="3"]
+
+position = Vector2( 12.0606, 7.19876 )
+scale = Vector2( 2.20606, 1.71988 )
+
+[node name="Decorazione" parent="Ost13/Position2D" index="0" instance=ExtResource( 11 )]
+
+[node name="Ost14" parent="." index="26" instance=ExtResource( 20 )]
+
+editor/display_folded = true
+position = Vector2( 8923.81, 919.224 )
+rotation = -0.0200347
+scale = Vector2( 0.9, 0.9 )
+
+[node name="Position2D" type="Position2D" parent="Ost14" index="2"]
+
+position = Vector2( 4.06836, 99.3048 )
+scale = Vector2( 2.73354, 3.03625 )
+
+[node name="Decorazione" parent="Ost14/Position2D" index="0" instance=ExtResource( 25 )]
+
+[node name="Ost15" parent="." index="27" instance=ExtResource( 20 )]
+
+editor/display_folded = true
+position = Vector2( 9144.83, 915.17 )
+rotation = -0.0658882
+scale = Vector2( 0.9, 0.9 )
+
+[node name="Position2D" type="Position2D" parent="Ost15" index="2"]
+
+position = Vector2( 77.46, 136.052 )
+scale = Vector2( -3.21492, 2.70951 )
+
+[node name="Decorazione" parent="Ost15/Position2D" index="0" instance=ExtResource( 26 )]
+
+[node name="Ost16" parent="." index="28" instance=ExtResource( 20 )]
+
+editor/display_folded = true
+position = Vector2( 9054.61, 646.971 )
+rotation = -0.0354657
+scale = Vector2( 0.9, 0.9 )
+
+[node name="Position2D" type="Position2D" parent="Ost16" index="2"]
+
+position = Vector2( 32.0039, 419.931 )
+
+[node name="Decorazione" parent="Ost16/Position2D" index="0" instance=ExtResource( 23 )]
+
+[node name="Ost17" parent="." index="29" instance=ExtResource( 19 )]
+
+editor/display_folded = true
+position = Vector2( 9868.2, 197.868 )
+rotation = -0.770036
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="Ost17" index="2"]
+
+position = Vector2( -374.188, 221.49 )
+rotation = -2.24377
+scale = Vector2( 2.64995, 8.90841 )
+shape = SubResource( 5 )
+
+[node name="Position2D" type="Position2D" parent="Ost17" index="3"]
+
+position = Vector2( -70.6152, 31.5134 )
+rotation = 0.828312
+scale = Vector2( 1.03762, 0.79118 )
+
+[node name="Decorazione" parent="Ost17/Position2D" index="0" instance=ExtResource( 13 )]
+
+[node name="Tomba" type="Sprite" parent="." index="30"]
+
+position = Vector2( 13643.1, 182.032 )
+z_index = 2
+texture = ExtResource( 27 )
+centered = false
+_sections_unfolded = [ "Offset", "Transform", "Z Index" ]
+
+[node name="FloorTomba" type="StaticBody2D" parent="Tomba" index="0"]
+
+input_pickable = false
+collision_layer = 1
+collision_mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Tomba/FloorTomba" index="0"]
+
+position = Vector2( 319.586, 965.268 )
+scale = Vector2( 1.45929, 1 )
+shape = SubResource( 6 )
+
+[node name="ForestBackgroundAudio" parent="." index="31" instance=ExtResource( 28 )]
+
+[node name="CameraEnd" type="Camera2D" parent="." index="32"]
+
+editor/display_folded = true
+position = Vector2( 12173.9, 125.076 )
+scale = Vector2( 2.5, 2.5 )
+anchor_mode = 0
+rotating = false
+current = false
+zoom = Vector2( 1, 1 )
+limit_left = -10000000
+limit_top = -10000000
+limit_right = 10000000
+limit_bottom = 10000000
+limit_smoothed = false
+drag_margin_h_enabled = true
+drag_margin_v_enabled = true
+smoothing_enabled = false
+smoothing_speed = 5.0
+offset_v = 0.0
+offset_h = 0.0
+drag_margin_left = 0.2
+drag_margin_top = 0.2
+drag_margin_right = 0.2
+drag_margin_bottom = 0.2
+editor_draw_screen = true
+editor_draw_limits = false
+editor_draw_drag_margin = false
+_sections_unfolded = [ "Editor", "Transform", "Z Index" ]
+
+[node name="Frame" type="Sprite" parent="CameraEnd" index="0"]
+
+visible = false
+scale = Vector2( 0.4, 0.4 )
+z_index = 10
+texture = ExtResource( 6 )
+centered = false
+_sections_unfolded = [ "Offset" ]
+
+[node name="DecorazioniFinali" type="Node2D" parent="." index="33"]
+
+[node name="Prato" type="Node2D" parent="DecorazioniFinali" index="0"]
+
+[node name="prato" type="Sprite" parent="DecorazioniFinali/Prato" index="0"]
+
+position = Vector2( 10929.8, 1061.54 )
+texture = ExtResource( 29 )
+
+[node name="prato2" type="Sprite" parent="DecorazioniFinali/Prato" index="1"]
+
+position = Vector2( 11276.3, 1204.44 )
+z_index = 11
+texture = ExtResource( 29 )
+
+[node name="prato3" type="Sprite" parent="DecorazioniFinali/Prato" index="2"]
+
+position = Vector2( 11944.1, 1040.05 )
+texture = ExtResource( 29 )
+
+[node name="prato4" type="Sprite" parent="DecorazioniFinali/Prato" index="3"]
+
+position = Vector2( 12320.9, 1190.75 )
+z_index = 11
+texture = ExtResource( 29 )
+
+[node name="prato5" type="Sprite" parent="DecorazioniFinali/Prato" index="4"]
+
+position = Vector2( 12988.7, 1043.48 )
+texture = ExtResource( 29 )
+
+[node name="prato6" type="Sprite" parent="DecorazioniFinali/Prato" index="5"]
+
+position = Vector2( 13364.3, 1183.64 )
+z_index = 11
+texture = ExtResource( 29 )
+
+[node name="prato8" type="Sprite" parent="DecorazioniFinali/Prato" index="6"]
+
+position = Vector2( 14398.1, 1175.29 )
+z_index = 11
+texture = ExtResource( 29 )
+
+[node name="prato7" type="Sprite" parent="DecorazioniFinali/Prato" index="7"]
+
+position = Vector2( 14053.8, 1036.63 )
+texture = ExtResource( 29 )
+
+[node name="abbellimento_albero_grosso" type="Sprite" parent="DecorazioniFinali" index="1"]
+
+position = Vector2( 13121.4, 474.355 )
+texture = ExtResource( 30 )
+
+[node name="fiori" type="Sprite" parent="DecorazioniFinali" index="2"]
+
+position = Vector2( 11861.1, 977.798 )
+texture = ExtResource( 31 )
+
+[node name="fiori2" type="Sprite" parent="DecorazioniFinali" index="3"]
+
+position = Vector2( 13066.4, 1149.57 )
+scale = Vector2( -1.15743, 1.14994 )
+z_index = 11
+texture = ExtResource( 31 )
+
+[node name="abbellimento_albero_fino" type="Sprite" parent="DecorazioniFinali" index="4"]
+
+position = Vector2( 12297.5, 494.101 )
+scale = Vector2( -0.867983, 0.709996 )
+texture = ExtResource( 32 )
+
+[node name="abbellimento_albero_grosso2" type="Sprite" parent="DecorazioniFinali" index="5"]
+
+position = Vector2( 11538.3, 555.801 )
+scale = Vector2( -0.703094, 0.891267 )
+texture = ExtResource( 30 )
+
+[node name="palloncino" type="Sprite" parent="DecorazioniFinali" index="6"]
+
+position = Vector2( 12431, 571.4 )
+texture = ExtResource( 33 )
+
+[node name="cuore_01" type="Sprite" parent="DecorazioniFinali" index="7"]
+
+position = Vector2( 13721.4, 837.011 )
+scale = Vector2( -1.13306, 1.0554 )
+texture = ExtResource( 34 )
+
+[node name="abbellimento_albero_fino2" type="Sprite" parent="DecorazioniFinali" index="8"]
+
+position = Vector2( 13317.1, 282.847 )
+texture = ExtResource( 32 )
+
+[node name="erba_02" type="Sprite" parent="DecorazioniFinali/abbellimento_albero_fino2" index="0"]
+
+position = Vector2( 472.033, 202.943 )
+rotation = 0.642254
+texture = ExtResource( 35 )
+
+[node name="erba_01" type="Sprite" parent="DecorazioniFinali/abbellimento_albero_fino2/erba_02" index="0"]
+
+position = Vector2( -70.1709, 180.341 )
+rotation = -1.67949
+texture = ExtResource( 36 )
+
+[node name="base_terreno" type="Sprite" parent="DecorazioniFinali" index="9"]
+
+position = Vector2( 14049.3, 1208.26 )
+z_index = 10
+texture = ExtResource( 7 )
+
+

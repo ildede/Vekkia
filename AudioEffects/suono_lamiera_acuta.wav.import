@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/suono_lamiera_acuta.wav-aa92456af96ebe1ad1a62543ad3a24ea.sample"
+
+[deps]
+
+source_file="res://AudioEffects/suono_lamiera_acuta.wav"
+dest_files=[ "res://.import/suono_lamiera_acuta.wav-aa92456af96ebe1ad1a62543ad3a24ea.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=true
+edit/normalize=true
+edit/loop=false
+compress/mode=0

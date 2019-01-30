@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/ammazzalavecchia.ogg-954070ec24ff554a6fd2a744ece68ad1.oggstr"
+
+[deps]
+
+source_file="res://AudioEffects/ammazzalavecchia.ogg"
+dest_files=[ "res://.import/ammazzalavecchia.ogg-954070ec24ff554a6fd2a744ece68ad1.oggstr" ]
+
+[params]
+
+loop=true
+loop_offset=0

@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/last_spin.wav-b526a53bbfa34e7e5e85b48c69093813.sample"
+
+[deps]
+
+source_file="res://AudioEffects/last_spin.wav"
+dest_files=[ "res://.import/last_spin.wav-b526a53bbfa34e7e5e85b48c69093813.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=true
+edit/normalize=true
+edit/loop=false
+compress/mode=0

@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/suono_lamiere_01.ogg-88af4f09107a0f1b1596bd0fcc54bd4a.oggstr"
+
+[deps]
+
+source_file="res://Scenes/Sounds/suono_lamiere_01.ogg"
+dest_files=[ "res://.import/suono_lamiere_01.ogg-88af4f09107a0f1b1596bd0fcc54bd4a.oggstr" ]
+
+[params]
+
+loop=true
+loop_offset=0

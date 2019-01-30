@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/suono_morte_vekkia.ogg-d2ff7d48bf45b833e74ff42364534c70.oggstr"
+
+[deps]
+
+source_file="res://Scenes/Sounds/suono_morte_vekkia.ogg"
+dest_files=[ "res://.import/suono_morte_vekkia.ogg-d2ff7d48bf45b833e74ff42364534c70.oggstr" ]
+
+[params]
+
+loop=true
+loop_offset=0

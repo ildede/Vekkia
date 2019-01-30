@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/suono_tumulazione.ogg-7fa95ccc652b41c27f3cc7ad5514079a.oggstr"
+
+[deps]
+
+source_file="res://Scenes/Sounds/suono_tumulazione.ogg"
+dest_files=[ "res://.import/suono_tumulazione.ogg-7fa95ccc652b41c27f3cc7ad5514079a.oggstr" ]
+
+[params]
+
+loop=true
+loop_offset=0

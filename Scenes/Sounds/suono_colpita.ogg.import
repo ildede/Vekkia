@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/suono_colpita.ogg-4b5642a591667da0e7ee269741b12149.oggstr"
+
+[deps]
+
+source_file="res://Scenes/Sounds/suono_colpita.ogg"
+dest_files=[ "res://.import/suono_colpita.ogg-4b5642a591667da0e7ee269741b12149.oggstr" ]
+
+[params]
+
+loop=true
+loop_offset=0

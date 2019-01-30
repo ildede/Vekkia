@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/start_screen.wav-11bb49fc8cca65673271cbbc14db559b.sample"
+
+[deps]
+
+source_file="res://AudioEffects/start_screen.wav"
+dest_files=[ "res://.import/start_screen.wav-11bb49fc8cca65673271cbbc14db559b.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=true
+edit/normalize=true
+edit/loop=false
+compress/mode=0

@@ -1,0 +1,51 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://Script/Ostacolo.gd" type="Script" id=1]
+[ext_resource path="res://Images/Ferraglia/antenna.png" type="Texture" id=2]
+
+[node name="Ostacolo" type="StaticBody2D"]
+
+position = Vector2( 2057.87, 473.478 )
+rotation = -7.54436e-08
+scale = Vector2( 1.58011, 1.97432 )
+input_pickable = true
+collision_layer = 1
+collision_mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+script = ExtResource( 1 )
+_sections_unfolded = [ "Collision", "Pickable", "Transform" ]
+
+[node name="braccio_normale" type="Button" parent="." index="0"]
+
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -129.0
+margin_top = -267.0
+margin_right = 129.0
+margin_bottom = 267.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 4
+size_flags_vertical = 4
+toggle_mode = false
+enabled_focus_mode = 0
+shortcut = null
+group = null
+icon = ExtResource( 2 )
+flat = true
+align = 1
+_sections_unfolded = [ "Anchor", "Margin", "Size Flags" ]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="." index="1"]
+
+build_mode = 0
+polygon = PoolVector2Array( -3.37024, 144.832, 1.29175, 83.2689, 3.62268, 59.6385, -57.7599, 51.5544, -82.6238, 16.1088, -59.3138, 1.18428, -8.03223, 6.78096, 6.73071, 12.3776, -3.37024, -49.1858, 38.5874, -35.5051, 133.381, -74.06, 132.604, -50.4295, 57.2355, 34.1425, 23.8246, 18.5962, 20.7166, 57.1511, 51.7964, 64.6133, 50.2423, 82.0252, 19.1626, 89.4875, 18.3856, 111.874, 30.8175, 118.715, 30.0405, 131.773, 12.9467, 142.967 )
+
+

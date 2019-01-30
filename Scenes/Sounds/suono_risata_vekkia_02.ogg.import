@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/suono_risata_vekkia_02.ogg-700c2fd16c7c4522f88aa8f0aee74b42.oggstr"
+
+[deps]
+
+source_file="res://Scenes/Sounds/suono_risata_vekkia_02.ogg"
+dest_files=[ "res://.import/suono_risata_vekkia_02.ogg-700c2fd16c7c4522f88aa8f0aee74b42.oggstr" ]
+
+[params]
+
+loop=true
+loop_offset=0
