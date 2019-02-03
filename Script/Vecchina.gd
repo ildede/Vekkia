@@ -9,7 +9,7 @@ const GRAVITY = 500.0 # pixels/second/second
 const FLOOR_ANGLE_TOLERANCE = 40
 const WALK_FORCE = 1600
 const WALK_MIN_SPEED = 30
-const WALK_MAX_SPEED = 1200
+const WALK_MAX_SPEED = 360
 const STOP_FORCE = 60
 const JUMP_SPEED = 600
 const JUMP_MAX_AIRBORNE_TIME = 0.2
@@ -33,6 +33,7 @@ var metalHornsEnable = false
 var hornCaller
 var legsIteration = 20
 var released = true
+var is_dead = false
 
 var prev_jump_pressed = false
 
@@ -50,7 +51,7 @@ func _ready():
 
 	risataVekkia = AudioStreamPlayer.new()
 	risataVekkia.autoplay = false
-	risataVekkia.volume_db = 3
+	risataVekkia.volume_db = -2
 	self.add_child(risataVekkia)
 
 	lastWheelSpin = AudioStreamPlayer.new()
@@ -111,7 +112,11 @@ func _physics_process(delta):
 		var vsign = sign(velocity.x)
 		var vlen = abs(velocity.x)
 		
-		vlen -= STOP_FORCE * delta
+		if is_dead:
+			vlen -= STOP_FORCE * delta * 3
+		else:
+			vlen -= STOP_FORCE * delta
+
 		if vlen < 0:
 			vlen = 0
 		
@@ -180,6 +185,7 @@ func _physics_process(delta):
 
 func pls_seppuku():
 	input_enable = false
+	is_dead = true
 	lastWheelSpin.play(7)
 	laVekkiaMuore.play()
 	get_node("AnimationPlayer").play("Anim_Death")

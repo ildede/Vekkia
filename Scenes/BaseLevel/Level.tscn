@@ -274,7 +274,6 @@ _sections_unfolded = [ "Transform" ]
 
 [node name="EndTrigger" type="Area2D" parent="." index="10"]
 
-editor/display_folded = true
 position = Vector2( 20220.8, 1939.5 )
 input_pickable = true
 gravity_vec = Vector2( 0, 1 )

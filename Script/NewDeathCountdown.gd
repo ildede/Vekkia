@@ -3,7 +3,7 @@ extends Node
 var timer = null
 var heart1 = null
 var heart2 = null
-var maxTimeParam = 30
+var maxTimeParam = 45
 var heartSpeedParam = 3
 var deltaSum = 0
 var slowed = false
