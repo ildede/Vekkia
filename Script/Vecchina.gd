@@ -67,7 +67,7 @@ func _ready():
 	self.add_child(laVekkiaSpaccaLePlacche)
 
 	wheelchair.stream = load("res://AudioEffects/wheelchair_effect.wav")
-	collisionOnMetalPlayer.stream = load("res://AudioEffects/suono_colpita.wav")
+	collisionOnMetalPlayer.stream = load("res://AudioEffects/no_no.wav")
 	risataVekkia.stream = load("res://AudioEffects/suono_risata_vekkia_02.wav")
 	lastWheelSpin.stream = load("res://AudioEffects/last_spin.wav")
 	laVekkiaMuore.stream = load("res://AudioEffects/suono_morte_vekkia.wav")
@@ -150,7 +150,7 @@ func _physics_process(delta):
 		get_node("Sprite_Frame/corpo_normale").visible = false
 		get_node("Sprite_Frame/corpo_gambe_alzate").visible = true
 		if (!collisionOnMetalPlayer.playing):
-			collisionOnMetalPlayer.play(1)
+			collisionOnMetalPlayer.play()
 	elif (legsIteration > 20):
 		get_node("Sprite_Frame/corpo_normale").visible = true
 		get_node("Sprite_Frame/corpo_gambe_alzate").visible = false
