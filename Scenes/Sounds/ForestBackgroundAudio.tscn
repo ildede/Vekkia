@@ -1,6 +1,6 @@
 [gd_scene load_steps=2 format=2]
 
-[ext_resource path="res://AudioEffects/natura_cupa.wav" type="AudioStream" id=1]
+[ext_resource path="res://AudioEffects/gameplay_music.ogg" type="AudioStream" id=1]
 
 [node name="ForestBackgroundAudio" type="Node" index="0"]
 
