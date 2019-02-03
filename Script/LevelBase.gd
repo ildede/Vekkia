@@ -27,12 +27,10 @@ func _on_stopcam_trigger_entered(body):
 	$CameraEnd/Frame.visible = true
 	$CameraEnd.current = true
 
-
 func _on_end_trigger_entered(body):
 	$Vecchina.input_enable = false
-	get_node("Vecchina/Camera2D/DeathCountdown").stop()
+	get_node("Vecchina/Camera2D/NewDeathCountdown").stop()
 	$Tomba/FloorTomba/CollisionShape2D.disabled = true
-	pass
 
 func _on_AnimationPlayer_animation_finished(anim_name):
 	if ( anim_name == "Anim_Death" ):
