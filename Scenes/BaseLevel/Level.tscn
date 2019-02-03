@@ -451,7 +451,6 @@ scale = Vector2( 0.514419, 0.596872 )
 
 [node name="Ost5" parent="." index="17" instance=ExtResource( 19 )]
 
-editor/display_folded = true
 position = Vector2( 4317.01, 270.935 )
 rotation = -0.115219
 scale = Vector2( 1, 1 )
@@ -471,13 +470,12 @@ position = Vector2( -132.241, 351 )
 
 [node name="Ost6" parent="." index="18" instance=ExtResource( 20 )]
 
-editor/display_folded = true
-position = Vector2( 4805.72, 449.037 )
+position = Vector2( 4574.11, 517.01 )
 rotation = 1.21406
 
 [node name="CollisionShape2D2" type="CollisionShape2D" parent="Ost6" index="2"]
 
-position = Vector2( 171.306, 239.913 )
+position = Vector2( 180.664, 106.623 )
 rotation = 1.86434
 scale = Vector2( 2.65384, 13.7049 )
 shape = SubResource( 5 )
@@ -675,13 +673,12 @@ position = Vector2( 32.0039, 419.931 )
 
 [node name="Ost17" parent="." index="29" instance=ExtResource( 20 )]
 
-editor/display_folded = true
-position = Vector2( 9868.2, 197.868 )
+position = Vector2( 9984.64, 396.505 )
 rotation = -0.770036
 
 [node name="CollisionShape2D2" type="CollisionShape2D" parent="Ost17" index="2"]
 
-position = Vector2( -374.188, 221.49 )
+position = Vector2( -327.646, 90.8838 )
 rotation = -2.24377
 scale = Vector2( 2.64995, 8.90841 )
 shape = SubResource( 5 )
