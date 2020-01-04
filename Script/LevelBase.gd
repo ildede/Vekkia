@@ -19,7 +19,7 @@ func _process(delta):
 		Global.goto_scene("res://Scenes/TheEnd/TheEnd.tscn")
 
 func _on_slow_trigger_entered(body):
-	get_node("Vecchina/Camera2D/DeathCountdown").slow()
+	get_node("Vecchina/Camera2D/NewDeathCountdown").slow()
 
 func _on_stopcam_trigger_entered(body):
 	$CameraEnd.global_position = $Vecchina/Camera2D.global_position
@@ -29,8 +29,8 @@ func _on_stopcam_trigger_entered(body):
 
 func _on_end_trigger_entered(body):
 	$Vecchina.input_enable = false
+	#$Tomba/FloorTomba/CollisionShape2D.disabled = true
 	get_node("Vecchina/Camera2D/NewDeathCountdown").stop()
-	$Tomba/FloorTomba/CollisionShape2D.disabled = true
 
 func _on_AnimationPlayer_animation_finished(anim_name):
 	if ( anim_name == "Anim_Death" ):

@@ -6,61 +6,31 @@
 [ext_resource path="res://Images/Ferraglia/bidone.png" type="Texture" id=4]
 
 [sub_resource type="RectangleShape2D" id=1]
-
-custom_solver_bias = 0.0
 extents = Vector2( 91.7656, 134.593 )
 
 [node name="Livello" type="Container"]
-
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
 margin_top = 2.0
 margin_right = 391.0
 margin_bottom = 235.0
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
-mouse_filter = 0
-mouse_default_cursor_shape = 0
-size_flags_horizontal = 1
-size_flags_vertical = 1
 
-[node name="Background" parent="." index="0" instance=ExtResource( 1 )]
-
+[node name="Background" parent="." instance=ExtResource( 1 )]
 margin_left = -13.0
 margin_right = 27.0
 
-[node name="Vecchina" parent="." index="1" instance=ExtResource( 2 )]
-
+[node name="Vecchina" parent="." instance=ExtResource( 2 )]
 position = Vector2( 368.599, 513.833 )
 scale = Vector2( 0.7, 0.7 )
-_sections_unfolded = [ "Transform", "collision" ]
 
-[node name="Foreground" parent="." index="2" instance=ExtResource( 3 )]
-
+[node name="Foreground" parent="." instance=ExtResource( 3 )]
 margin_top = 3.0
 margin_bottom = 43.0
 
-[node name="OstacoloJump" type="StaticBody2D" parent="." index="3"]
-
+[node name="OstacoloJump" type="StaticBody2D" parent="."]
+editor/display_folded = true
 position = Vector2( 1089.13, 690.309 )
-input_pickable = false
-collision_layer = 1
-collision_mask = 1
-constant_linear_velocity = Vector2( 0, 0 )
-constant_angular_velocity = 0.0
-friction = 1.0
-bounce = 0.0
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="OstacoloJump" index="0"]
-
+[node name="CollisionShape2D" type="CollisionShape2D" parent="OstacoloJump"]
 shape = SubResource( 1 )
-_sections_unfolded = [ "Transform" ]
 
-[node name="bidone" type="Sprite" parent="OstacoloJump" index="1"]
-
+[node name="bidone" type="Sprite" parent="OstacoloJump"]
 texture = ExtResource( 4 )
-_sections_unfolded = [ "Transform" ]
-
-
